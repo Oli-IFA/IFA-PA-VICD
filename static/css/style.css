@@ -1,0 +1,57 @@
+:root {
+  --bg-color: #18111D;
+  --secondary-title: #A499B3;
+  --main-title: #D0BCD5;
+  --body-text: #E4F0D0;
+  --yellow: #F3C57A;
+}
+
+body {
+  background-image: url('bg.jpeg');
+  background-attachment: fixed;
+}
+
+.card {
+  background-color: darkslateblue;
+  color: white;
+}
+
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  color: var(--main-title);
+}
+
+.card-title {
+  color: var(--main-title);
+}
+
+.card-subtitle {
+  color: var(--yellow);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p, .p {
+  color: var(--body-text);
+}
+
+.navbar-brand {
+  color: var(--secondary-title)!important;
+}
+
+h6, .h6{
+  color: var(--secondary-title);
+}
+
+.title {
+  background-color: inherit;
+  border: none;
+  color: var(--body-text);
+}
+
+.content {
+  background-color: inherit;
+  border: none;
+}

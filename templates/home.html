@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="blockquote text-center mb-5">
+    <h1 class="display-1">{% block title %} Meine Träume {% endblock %}</h1>
+    <p>Ein Ort, an dem Sie Ihre Träume festhalten können.</p>
+
+</div>
+<hr>
+
+{% if not posts %}
+<div style="padding: 30px;" class="p lead text-center">Noch keine Träume</div>
+{% else %}
+<form action="/" method="post" class="mx-3">
+    <button class="btn btn-light" name="toggle-order" type="submit" style="opacity: 75%;"> ^ {{ order }}</button>
+</form>
+{% endif %}
+{% for post in posts %}
+<div class="card" style="margin-top:10pt;background:inherit">
+    <div class="card-body">
+        <a href="{{ url_for('post', post_id=post['id']) }}">
+            <h2 class="card-title" style="text-decoration:none">{{ post['title'] }}</h2>
+        </a>
+        <span class="card-subtitle mb-2">{{ post['created'] }}</span>
+    </div>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
